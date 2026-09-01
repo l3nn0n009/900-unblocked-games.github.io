@@ -40,6 +40,82 @@
       margin: 0;
       color: var(--muted);
     }
+    .header-feature {
+      position: relative;
+      display: grid;
+      grid-template-columns: 96px minmax(0, 1fr);
+      align-items: center;
+      gap: 16px;
+      width: min(440px, 100%);
+      min-height: 120px;
+      margin-bottom: 18px;
+      padding: 12px 58px 12px 12px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      background: var(--card-bg);
+      color: var(--fg);
+      text-decoration: none;
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.3);
+      transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .header-feature:hover {
+      border-color: var(--accent);
+      transform: translateY(-2px);
+      box-shadow: 0 20px 46px rgba(0, 0, 0, 0.38);
+    }
+    .header-feature:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 3px;
+    }
+    .header-feature-image {
+      width: 96px;
+      height: 96px;
+      border: 1px solid var(--border);
+      border-radius: 11px;
+      object-fit: cover;
+      background: #0a0d14;
+    }
+    .header-feature-copy {
+      display: grid;
+      min-width: 0;
+      gap: 3px;
+    }
+    .header-feature-kicker {
+      color: var(--accent);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    .header-feature-title {
+      overflow: hidden;
+      font-size: 1.3rem;
+      line-height: 1.2;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .header-feature-meta {
+      color: var(--muted);
+      font-size: 0.83rem;
+    }
+    .header-feature-badge {
+      position: absolute;
+      top: 17px;
+      right: -38px;
+      width: 150px;
+      padding: 6px 0;
+      transform: rotate(38deg);
+      background: var(--accent);
+      color: #07111f;
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 0.13em;
+      line-height: 1;
+      text-align: center;
+      text-transform: uppercase;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.28);
+    }
     .summary {
       margin-top: 12px;
       display: flex;
@@ -227,6 +303,7 @@
       display: grid;
       gap: 16px;
       padding: 16px;
+      scroll-margin-top: 190px;
       background: var(--card-bg);
       border-radius: 12px;
       border: 1px solid var(--border);
@@ -468,6 +545,15 @@
       border: 0;
     }
     @media (max-width: 700px) {
+      .header-feature {
+        grid-template-columns: 76px minmax(0, 1fr);
+        min-height: 100px;
+        padding-left: 10px;
+      }
+      .header-feature-image {
+        width: 76px;
+        height: 76px;
+      }
       iframe {
         min-height: 360px;
       }
@@ -668,6 +754,13 @@
 </head>
 <body>
   <header class="page-header">
+    <a class="header-feature" href="#game-1001" aria-label="New game: jump to the Poly Track tile">
+      <span class="header-feature-badge">New</span>
+      <img class="header-feature-image" src="https://cdn.jsdelivr.net/gh/freebuisness/covers@main/123.png" alt="" />
+      <span class="header-feature-copy">
+        <strong class="header-feature-title">Poly Track</strong>
+      </span>
+    </a>
     <h1>Unblocked Games Library</h1>
     <p>Embeds for every playable class discovered by the scanner, complete with quick access links and art.</p>
     <div class="summary">
