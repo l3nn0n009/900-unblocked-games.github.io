@@ -754,7 +754,7 @@
 </head>
 <body>
   <header class="page-header">
-    <a class="header-feature" href="#game-1001" aria-label="New game: jump to the Poly Track tile">
+    <a class="header-feature" href="#game-1001" data-game-id="game-1001" aria-label="New game: play Poly Track">
       <span class="header-feature-badge">New</span>
       <img class="header-feature-image" src="https://cdn.jsdelivr.net/gh/freebuisness/covers@main/123.png" alt="" />
       <span class="header-feature-copy">
@@ -12521,6 +12521,7 @@
                 <p>Class 1001 · <a href="about:blank#polytrack-clean" target="_blank" rel="noopener">Open game</a></p>
               </div>
             </header>
+            <p class="polytrack-attribution">Original game by Kodub · <a href="https://www.crazygames.com/game/polytrack" target="_blank" rel="noopener">Official PolyTrack page</a></p>
           </article>
     </section>
   </main>
@@ -12576,10 +12577,16 @@
     const POLYTRACK_GAME_ID = 'game-1001';
     const POLYTRACK_HTML_B64 = 'PCFkb2N0eXBlIGh0bWw+CjxodG1sPgoKPGhlYWQ+CiAgICA8YmFzZSBocmVmPSJodHRwczovL2Nkbi5qc2RlbGl2ci5uZXQvZ2gvYnViYmxmYW4vcG9seXRyYWNrQGZlYjdmMDQ1ZTg1ZmRmMDdlMGQ3ZjdlNmQwZjA4OTg0YjlmZTIwZDYvIj4KICAgIDxzY3JpcHQ+CiAgICAgICAgd2luZG93LmprZGZnbmprbmRmZyA9IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoJ2Jhc2UnKS5ocmVmOwogICAgICAgIGZldGNoKCJzaW11bGF0aW9uX3dvcmtlci5idW5kbGUuanMiKS50aGVuKHJlcyA9PiByZXMudGV4dCgpKS50aGVuKHRleHQgPT4gewogICAgICAgICAgICBjb25zdCBibG9iID0gbmV3IEJsb2IoW3RleHQucmVwbGFjZUFsbCgicmVwbGFjZXRoaXNwbGVhc2UiLCB3aW5kb3cuamtkZmduamtuZGZnKV0sIHsKICAgICAgICAgICAgICAgIHR5cGU6ICdhcHBsaWNhdGlvbi9qYXZhc2NyaXB0JwogICAgICAgICAgICB9KTsKICAgICAgICAgICAgd2luZG93LnNpbXVsYXRpb253b3JrZXIgPSBVUkwuY3JlYXRlT2JqZWN0VVJMKGJsb2IpOwogICAgICAgIH0pOwogICAgICAgIGNvbnN0IG9nd29ya2VyID0gd2luZG93LldvcmtlcjsKICAgICAgICB3aW5kb3cuV29ya2VyID0gZnVuY3Rpb24gKHNjcmlwdFVybCwgb3B0aW9ucykgewogICAgICAgICAgICBpZiAodHlwZW9mIHNjcmlwdFVybCA9PT0gJ3N0cmluZycgJiYgc2NyaXB0VXJsLnRvTG93ZXJDYXNlKCkgPT09ICJzaW11bGF0aW9uX3dvcmtlci5idW5kbGUuanMiKSB7CiAgICAgICAgICAgICAgICBjb25zdCB3cmFwcGVyID0ge307CiAgICAgICAgICAgICAgICAgICAgY29uc3QgYWN0dWFsV29ya2VyID0gbmV3IG9nd29ya2VyKHdpbmRvdy5zaW11bGF0aW9ud29ya2VyLCBvcHRpb25zKTsKICAgICAgICAgICAgICAgICAgICBPYmplY3QuYXNzaWduKHdyYXBwZXIsIGFjdHVhbFdvcmtlcik7CiAgICAgICAgICAgICAgICAgICAgaWYgKHR5cGVvZiB3cmFwcGVyLm9ubWVzc2FnZSA9PT0gJ2Z1bmN0aW9uJykgewogICAgICAgICAgICAgICAgICAgICAgICBhY3R1YWxXb3JrZXIub25tZXNzYWdlID0gd3JhcHBlci5vbm1lc3NhZ2U7CiAgICAgICAgICAgICAgICAgICAgfQogICAgICAgICAgICAgICAgICAgIHJldHVybiBhY3R1YWxXb3JrZXI7CiAgICAgICAgICAgICAgICByZXR1cm4gbmV3IFByb3h5KHdyYXBwZXIsIHsKICAgICAgICAgICAgICAgICAgICBnZXQodGFyZ2V0LCBwcm9wKSB7CiAgICAgICAgICAgICAgICAgICAgICAgIHJldHVybiAoLi4uYXJncykgPT4gewogICAgICAgICAgICAgICAgICAgICAgICAgICAgcHJvbWlzZS50aGVuKHJlYWxXb3JrZXIgPT4gcmVhbFdvcmtlcltwcm9wXSguLi5hcmdzKSk7CiAgICAgICAgICAgICAgICAgICAgICAgIH07CiAgICAgICAgICAgICAgICAgICAgfSwKICAgICAgICAgICAgICAgICAgICBzZXQodGFyZ2V0LCBwcm9wLCB2YWx1ZSkgewogICAgICAgICAgICAgICAgICAgICAgICBwcm9taXNlLnRoZW4ocmVhbFdvcmtlciA9PiB7CiAgICAgICAgICAgICAgICAgICAgICAgICAgICByZWFsV29ya2VyW3Byb3BdID0gdmFsdWU7CiAgICAgICAgICAgICAgICAgICAgICAgIH0pOwogICAgICAgICAgICAgICAgICAgICAgICByZXR1cm4gdHJ1ZTsKICAgICAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgICAgICB9KTsKICAgICAgICAgICAgfQogICAgICAgICAgICByZXR1cm4gbmV3IG9nd29ya2VyKHNjcmlwdFVybCwgb3B0aW9ucyk7CiAgICAgICAgfTsKICAgICAgICB3aW5kb3cuV29ya2VyLnByb3RvdHlwZSA9IG9nd29ya2VyLnByb3RvdHlwZTsKICAgICAgICBjb25zdCBvZ2ZldGNoID0gd2luZG93LmZldGNoOwogICAgICAgIHdpbmRvdy5mZXRjaCA9IGFzeW5jIGZ1bmN0aW9uIChpbnB1dCwgaW5pdCkgewogICAgICAgICAgICBpZiAodHlwZW9mIGlucHV0ID09PSAic3RyaW5nIikgewogICAgICAgICAgICAgICAgaW5wdXQgPSBpbnB1dC5yZXBsYWNlKCJ2cHMua29kdWIuY29tIiwgInZwc2tvZHViLnRtZW5hMTU2NS53b3JrZXJzLmRldiIpOwogICAgICAgICAgICB9IGVsc2UgaWYgKGlucHV0IGluc3RhbmNlb2YgUmVxdWVzdCkgewogICAgICAgICAgICAgICAgY29uc3QgbmV3VXJsID0gaW5wdXQudXJsLnJlcGxhY2UoInZwcy5rb2R1Yi5jb20iLCAidnBza29kdWIudG1lbmExNTY1LndvcmtlcnMuZGV2Iik7CiAgICAgICAgICAgICAgICBpbnB1dCA9IG5ldyBSZXF1ZXN0KG5ld1VybCwgaW5wdXQpOwogICAgICAgICAgICB9CiAgICAgICAgICAgIHJldHVybiBvZ2ZldGNoKGlucHV0LCBpbml0KTsKICAgICAgICB9OwogICAgICAgIGNvbnN0IG9neG1sID0gWE1MSHR0cFJlcXVlc3QucHJvdG90eXBlLm9wZW47CiAgICAgICAgWE1MSHR0cFJlcXVlc3QucHJvdG90eXBlLm9wZW4gPSBmdW5jdGlvbiAobWV0aG9kLCB1cmwsIC4uLnJlc3QpIHsKICAgICAgICAgICAgaWYgKHR5cGVvZiB1cmwgPT09ICJzdHJpbmciKSB7CiAgICAgICAgICAgICAgICB1cmwgPSB1cmwucmVwbGFjZSgidnBzLmtvZHViLmNvbSIsICJ2cHNrb2R1Yi50bWVuYTE1NjUud29ya2Vycy5kZXYiKTsKICAgICAgICAgICAgfQogICAgICAgICAgICByZXR1cm4gb2d4bWwuY2FsbCh0aGlzLCBtZXRob2QsIHVybCwgLi4ucmVzdCk7CiAgICAgICAgfTsKICAgIDwvc2NyaXB0PgogICAgPG1ldGEgY2hhcnNldD0idXRmLTgiPgogICAgPGxpbmsgcmVsPSJwcmVsb2FkIiBocmVmPSJmb3JjZWRfc3F1YXJlLndvZmYyIiBhcz0iZm9udCIgdHlwZT0iZm9udC93b2ZmMiIgY3Jvc3NvcmlnaW49ImFub255bW91cyIgLz4KICAgIDxsaW5rIHJlbD0icHJlbG9hZCIgaHJlZj0iaW1hZ2VzL2xvZ28uc3ZnIiBhcz0iaW1hZ2UiIHR5cGU9ImltYWdlL3N2Zyt4bWwiIC8+CiAgICA8bGluayByZWw9InByZWxvYWQiIGhyZWY9ImltYWdlcy9kaXNjb3JkLnN2ZyIgYXM9ImltYWdlIiB0eXBlPSJpbWFnZS9zdmcreG1sIiAvPgogICAgPGxpbmsgcmVsPSJtYW5pZmVzdCIgaHJlZj0ibWFuaWZlc3QuanNvbiIgLz4KICAgIDxtZXRhIG5hbWU9InZpZXdwb3J0IgogICAgICAgIGNvbnRlbnQ9IndpZHRoPWRldmljZS13aWR0aCxpbml0aWFsLXNjYWxlPTEsbWluaW11bS1zY2FsZT0xLG1heGltdW0tc2NhbGU9MSx2aWV3cG9ydC1maXQ9Y292ZXIsdXNlci1zY2FsYWJsZT1ubyI+CiAgICA8c2NyaXB0IGRlZmVyPSJkZWZlciIgc3JjPSJlcnJvcl9zY3JlZW4uYnVuZGxlLmpzIj48L3NjcmlwdD4KICAgIDxzY3JpcHQgZGVmZXI9ImRlZmVyIiBzcmM9Im1haW4uYnVuZGxlLmpzIj48L3NjcmlwdD4KPC9oZWFkPgoKPGJvZHk+PGNhbnZhcyBpZD0ic2NyZWVuIj48L2NhbnZhcz4KICAgIDxkaXYgaWQ9InVpIj48L2Rpdj4KICAgIDxkaXYgaWQ9InRyYW5zaXRpb24tbGF5ZXIiPjwvZGl2Pgo8L2JvZHk+Cgo8L2h0bWw+';
 
+    const KODUB_POLYTRACK_HTML_B64 = 'PCFkb2N0eXBlIGh0bWw+CjxodG1sIGxhbmc9ImVuIj4KPGhlYWQ+CiAgPGJhc2UgaHJlZj0iaHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L2doL2h0bWx1bmJsb2NrZWRnYW1lcy9wb2x5dHJhY2stMC41LjItY2xlYW5AMjJjMmZjNTQwM2ViZWQ5NDc3MjdlZWMxOTRjNGI2YjIwZWVjNmFhMi8iPgogIDxtZXRhIGNoYXJzZXQ9InV0Zi04Ij4KICA8bWV0YSBuYW1lPSJ2aWV3cG9ydCIgY29udGVudD0id2lkdGg9ZGV2aWNlLXdpZHRoLGluaXRpYWwtc2NhbGU9MSxtaW5pbXVtLXNjYWxlPTEsbWF4aW11bS1zY2FsZT0xLHZpZXdwb3J0LWZpdD1jb3Zlcix1c2VyLXNjYWxhYmxlPW5vIj4KICA8bGluayByZWw9InByZWxvYWQiIGhyZWY9ImZvcmNlZF9zcXVhcmUud29mZjIiIGFzPSJmb250IiB0eXBlPSJmb250L3dvZmYyIiBjcm9zc29yaWdpbj0iYW5vbnltb3VzIj4KICA8bGluayByZWw9InByZWxvYWQiIGhyZWY9ImltYWdlcy9sb2dvLnN2ZyIgYXM9ImltYWdlIiB0eXBlPSJpbWFnZS9zdmcreG1sIj4KICA8bGluayByZWw9InByZWxvYWQiIGhyZWY9ImltYWdlcy9kaXNjb3JkLnN2ZyIgYXM9ImltYWdlIiB0eXBlPSJpbWFnZS9zdmcreG1sIj4KICA8c2NyaXB0IHR5cGU9ImFwcGxpY2F0aW9uL2pzb24iIHNyYz0iaHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L2doL2h0bWx1bmJsb2NrZWRnYW1lcy9wb2x5dHJhY2stMC41LjItY2xlYW5AMjJjMmZjNTQwM2ViZWQ5NDc3MjdlZWMxOTRjNGI2YjIwZWVjNmFhMi9ydW50aW1lLWJhc2UuanMiPjwvc2NyaXB0PgogIDxzdHlsZT4KICAgIGh0bWwsYm9keXt3aWR0aDoxMDAlO2hlaWdodDoxMDAlO21hcmdpbjowO292ZXJmbG93OmhpZGRlbjtiYWNrZ3JvdW5kOiMwMDA7Y29sb3I6I2ZmZjtmb250LWZhbWlseTpBcmlhbCxzYW5zLXNlcmlmfQogICAgY2FudmFze2Rpc3BsYXk6YmxvY2t9CiAgICAjcG9seXRyYWNrLWxvYWRlcntwb3NpdGlvbjpmaXhlZDtpbnNldDowO2Rpc3BsYXk6Z3JpZDtwbGFjZS1pdGVtczpjZW50ZXI7YmFja2dyb3VuZDojMTAxMzFhO3otaW5kZXg6OTk5OTk7dGV4dC1hbGlnbjpjZW50ZXI7cGFkZGluZzoyNHB4fQogICAgI3BvbHl0cmFjay1sb2FkZXIgc3Ryb25ne2ZvbnQtc2l6ZToyMHB4fQogICAgI3BvbHl0cmFjay1sb2FkZXIgc21hbGx7ZGlzcGxheTpibG9jazttYXJnaW4tdG9wOjhweDtjb2xvcjojOWFhM2I3fQogIDwvc3R5bGU+CjwvaGVhZD4KPGJvZHk+CiAgPGNhbnZhcyBpZD0ic2NyZWVuIj48L2NhbnZhcz4KICA8ZGl2IGlkPSJ1aSI+PC9kaXY+CiAgPGRpdiBpZD0idHJhbnNpdGlvbi1sYXllciI+PC9kaXY+CiAgPGRpdiBpZD0icG9seXRyYWNrLWxvYWRlciI+PGRpdj48c3Ryb25nPkxvYWRpbmcgS29kdWIncyBvcmlnaW5hbCBQb2x5VHJhY2vigKY8L3N0cm9uZz48c21hbGw+VmVyc2lvbiAwLjUuMjwvc21hbGw+PC9kaXY+PC9kaXY+CiAgPHNjcmlwdD4KICAgIChhc3luYyBmdW5jdGlvbiAoKSB7CiAgICAgIGNvbnN0IGFzc2V0QmFzZSA9IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoJ2Jhc2UnKS5ocmVmOwogICAgICBjb25zdCBsb2FkZXIgPSBkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgncG9seXRyYWNrLWxvYWRlcicpOwogICAgICB0cnkgewogICAgICAgIGNvbnN0IGZpbGVzID0gYXdhaXQgUHJvbWlzZS5hbGwoWwogICAgICAgICAgZmV0Y2goYXNzZXRCYXNlICsgJ3NpbXVsYXRpb25fd29ya2VyLmJ1bmRsZS5qcycpLnRoZW4ocmVzcG9uc2UgPT4geyBpZiAoIXJlc3BvbnNlLm9rKSB0aHJvdyBuZXcgRXJyb3IoJ1dvcmtlciAnICsgcmVzcG9uc2Uuc3RhdHVzKTsgcmV0dXJuIHJlc3BvbnNlLnRleHQoKTsgfSksCiAgICAgICAgICBmZXRjaChhc3NldEJhc2UgKyAnZXJyb3Jfc2NyZWVuLmJ1bmRsZS5qcycpLnRoZW4ocmVzcG9uc2UgPT4geyBpZiAoIXJlc3BvbnNlLm9rKSB0aHJvdyBuZXcgRXJyb3IoJ0Vycm9yIHNjcmVlbiAnICsgcmVzcG9uc2Uuc3RhdHVzKTsgcmV0dXJuIHJlc3BvbnNlLnRleHQoKTsgfSksCiAgICAgICAgICBmZXRjaChhc3NldEJhc2UgKyAnbWFpbi5idW5kbGUuanMnKS50aGVuKHJlc3BvbnNlID0+IHsgaWYgKCFyZXNwb25zZS5vaykgdGhyb3cgbmV3IEVycm9yKCdHYW1lICcgKyByZXNwb25zZS5zdGF0dXMpOyByZXR1cm4gcmVzcG9uc2UudGV4dCgpOyB9KQogICAgICAgIF0pOwogICAgICAgIGNvbnN0IHdvcmtlclVybCA9IFVSTC5jcmVhdGVPYmplY3RVUkwobmV3IEJsb2IoW2ZpbGVzWzBdXSwgeyB0eXBlOiAnYXBwbGljYXRpb24vamF2YXNjcmlwdCcgfSkpOwogICAgICAgIGNvbnN0IE5hdGl2ZVdvcmtlciA9IHdpbmRvdy5Xb3JrZXI7CiAgICAgICAgd2luZG93LldvcmtlciA9IGZ1bmN0aW9uIChzY3JpcHRVcmwsIG9wdGlvbnMpIHsKICAgICAgICAgIGNvbnN0IHZhbHVlID0gU3RyaW5nKHNjcmlwdFVybCk7CiAgICAgICAgICBpZiAodmFsdWUgPT09ICdzaW11bGF0aW9uX3dvcmtlci5idW5kbGUuanMnIHx8IHZhbHVlLmVuZHNXaXRoKCcvc2ltdWxhdGlvbl93b3JrZXIuYnVuZGxlLmpzJykpIHsKICAgICAgICAgICAgcmV0dXJuIG5ldyBOYXRpdmVXb3JrZXIod29ya2VyVXJsLCBvcHRpb25zKTsKICAgICAgICAgIH0KICAgICAgICAgIHJldHVybiBuZXcgTmF0aXZlV29ya2VyKHNjcmlwdFVybCwgb3B0aW9ucyk7CiAgICAgICAgfTsKICAgICAgICB3aW5kb3cuV29ya2VyLnByb3RvdHlwZSA9IE5hdGl2ZVdvcmtlci5wcm90b3R5cGU7CgogICAgICAgIGNvbnN0IGhvc3RDaGVjayA9IC9mdW5jdGlvbiBqVFwoXClce1tcc1xTXSo/XH1mdW5jdGlvbiBRVFwoLzsKICAgICAgICBjb25zdCBnYW1lU291cmNlID0gZmlsZXNbMl0ucmVwbGFjZShob3N0Q2hlY2ssICdmdW5jdGlvbiBqVCgpe3JldHVybiExfWZ1bmN0aW9uIFFUKCcpOwogICAgICAgIGlmIChnYW1lU291cmNlID09PSBmaWxlc1syXSkgdGhyb3cgbmV3IEVycm9yKCdDb21wYXRpYmlsaXR5IHBhdGNoIGNvdWxkIG5vdCBiZSBhcHBsaWVkJyk7CgogICAgICAgIGZ1bmN0aW9uIHJ1bihzb3VyY2UpIHsKICAgICAgICAgIGNvbnN0IHNjcmlwdCA9IGRvY3VtZW50LmNyZWF0ZUVsZW1lbnQoJ3NjcmlwdCcpOwogICAgICAgICAgc2NyaXB0LnRleHRDb250ZW50ID0gc291cmNlOwogICAgICAgICAgZG9jdW1lbnQuaGVhZC5hcHBlbmRDaGlsZChzY3JpcHQpOwogICAgICAgIH0KICAgICAgICBsb2FkZXIucmVtb3ZlKCk7CiAgICAgICAgcnVuKGZpbGVzWzFdKTsKICAgICAgICBydW4oZ2FtZVNvdXJjZSk7CiAgICAgIH0gY2F0Y2ggKGVycm9yKSB7CiAgICAgICAgY29uc29sZS5lcnJvcihlcnJvcik7CiAgICAgICAgbG9hZGVyLmlubmVySFRNTCA9ICc8ZGl2PjxzdHJvbmc+UG9seVRyYWNrIGNvdWxkIG5vdCBsb2FkLjwvc3Ryb25nPjxzbWFsbD4nICsgU3RyaW5nKGVycm9yLm1lc3NhZSB8fCBlcnJvcikgKyAnPC9zbWFsbD48L2Rpdj4nOwogICAgICB9CiAgICB9KSgpOwogIDwvc2NyaXB0Pgo8L2JvZHk+CjwvaHRtbD4K';
+
     function getPolyTrackHtml() {
-      const binary = atob(POLYTRACK_HTML_B64);
+      const binary = atob(KODUB_POLYTRACK_HTML_B64);
       const bytes = Uint8Array.from(binary, character => character.charCodeAt(0));
-      return new TextDecoder().decode(bytes);
+      const html = new TextDecoder().decode(bytes);
+      return html.replace(
+        "const workerUrl = URL.createObjectURL(new Blob([files[0]], { type: 'application/javascript' }));",
+        "const workerSource = files[0].replace('importScripts(\"lib/ammo.wasm.js\")', 'importScripts(\"' + assetBase + 'lib/ammo.wasm.js\")').replace('Ammo().then(', 'Ammo({locateFile:function(path){return \"' + assetBase + '\"+path}}).then('); const workerUrl = URL.createObjectURL(new Blob([workerSource], { type: 'application/javascript' }));"
+      );
     }
 
     function openPolyTrackTab() {
@@ -12615,6 +12622,7 @@
     const categoryLookup = new Map(CATEGORY_DEFS.map(def => [def.id, def]));
 
     const cards = Array.from(document.querySelectorAll('.directory-card'));
+    const featuredGameLinks = Array.from(document.querySelectorAll('.header-feature[data-game-id]'));
     const articles = Array.from(document.querySelectorAll('article.game'));
     const categoryContainer = document.getElementById('category-container');
     const totalGamesElement = document.querySelector('.summary strong');
@@ -12651,6 +12659,7 @@
     renderCategories();
     updateGameCount();
     setupDirectory();
+    setupFeaturedGames();
     setupSearch();
     setupModal();
     setupChat();
@@ -12836,6 +12845,18 @@
           event.preventDefault();
           const id = (card.getAttribute('href') || '').replace('#', '');
           const index = idToIndex.get(id);
+          if (typeof index === 'number') {
+            openGame(index);
+          }
+        });
+      });
+    }
+
+    function setupFeaturedGames() {
+      featuredGameLinks.forEach(link => {
+        link.addEventListener('click', event => {
+          event.preventDefault();
+          const index = idToIndex.get(link.dataset.gameId || '');
           if (typeof index === 'number') {
             openGame(index);
           }
